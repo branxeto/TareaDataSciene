@@ -1,0 +1,8 @@
+
+.venv/
+
+Datos/IPC/*.csv
+Datos/*.csv
+
+__pycache__/
+*.pyc
