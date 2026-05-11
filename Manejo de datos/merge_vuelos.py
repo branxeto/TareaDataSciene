@@ -21,7 +21,7 @@ pivot = pivot.sort_values("key_mes").reset_index(drop=True)
 pivot["pax_total_var_pct"] = pivot["pax_total"].pct_change().round(4)
 pivot["pax_total_ma3"]     = pivot["pax_total"].rolling(3, min_periods=1).mean().round(0)
 
-airbnb = pd.read_csv(os.path.join(DATOS, "santiago_final_con_metro.csv"), low_memory=False)
+airbnb = pd.read_csv(os.path.join(DATOS, "Datos_santigo_final_Junto_con_Datos_IPC.csv"), low_memory=False)
 airbnb["archivo_fecha_origen"] = pd.to_datetime(airbnb["archivo_fecha_origen"], errors="coerce")
 airbnb["key_mes"] = airbnb["archivo_fecha_origen"].dt.strftime("%Y-%m")
 
